@@ -1,17 +1,8 @@
 FROM node:alpine
  
 WORKDIR /app
-COPY ./package.json ./
+COPY ./app/package.json ./
 RUN npm install
-#COPY . .
+COPY ./app .
 
-CMD ["npm", "run", "dev"]
-
-# docker build -f Dockerfile.dev .
-# docker run -it -p 3000:3000 CONTAINER_ID
-# docker run -it -p 3000:3000 -v /app/node_modules -v ${pwd}:/app CONTAINER_ID
-#where:
-# -it to run interactive mode
-# -p 3000:3000 to set ports
-# -v $(pwd):/app to reference to files
-# -v /app/node_modules to not reference to node_modules
+CMD ["npm", "run", "start"]

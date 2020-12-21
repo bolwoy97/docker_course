@@ -6,15 +6,3 @@ RUN npm install
 COPY ./ ./
 
 CMD ["npm", "start"]
-
-# docker-machine ip
-# docker build -t bolwoy/nodeapp .
-# docker run -p 8080:8080 bolwoy/nodeapp
-# docker run -it bolwoy/nodeapp sh
-# docker exec -it 00b6ffc5c435 sh
-# docker kill $(docker ps -q)
-# docker rm $(docker ps -a -q) 
-
-# docker images -a
-# docker rmi -f $(docker images -a -q)
-# docker system prune

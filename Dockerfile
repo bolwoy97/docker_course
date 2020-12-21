@@ -2,11 +2,11 @@ FROM node:alpine
 
 WORKDIR '/app'
 
-#COPY ./app/package.json .
-#RUN npm install
-#COPY ./app .
-#RUN npm run start
-COPY ./app/views/index.html .
+COPY ./app/package.json .
+RUN npm install
+COPY ./app .
+RUN npm run start
+#COPY ./app/views/index.html .
 
 FROM nginx
 #COPY --from=0 /app/build /usr/share/nginx/html
