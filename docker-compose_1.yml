@@ -1,0 +1,9 @@
+# docker-compose down && docker-compose up --build
+version: '3'
+services: 
+  node_app: 
+    restart: always
+    build: .
+    ports: 
+      - "8080:8080"
+
